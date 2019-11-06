@@ -14,10 +14,6 @@ export partial class Float {
   is Number.
 }
 
-export partial class Float16 {
-  is Float.
-}
-
 export partial class Float32 {
   is Float.
 }
@@ -63,6 +59,10 @@ export partial class UInt32 {
 }
 
 export partial class UInt64 {
+  is Natural.
+}
+
+export partial class UInt128 {
   is Natural.
 }
 
