@@ -1,0 +1,44 @@
+namespace Loa.
+
+import Loa/Boolean.
+import Loa/True.
+import Loa/False.
+
+export partial class Maybe<a out> {
+  public otherwise: a -> a.
+  
+  public isSome -> Boolean.
+  
+  public isNone -> Boolean.
+  
+  public value -> a.
+}
+
+export class None {
+  is Maybe<_>.
+  
+  public value =>
+    True.
+  
+  public isSome =>
+    False.
+  
+  public isNone =>
+    True.
+  
+  public <a> otherwise: a fallback =>
+    fallback.
+}
+
+// class Some<a out> {
+// is Maybe<a>.
+// 
+// private var a value.
+// 
+// public init of: a value =>
+// value: value.
+// 
+// public isSome => True.
+// public isNone => False.
+// public otherwise: _ => self value.
+// }
