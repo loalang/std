@@ -1,0 +1,5 @@
+namespace Loa.
+
+export partial class Object {
+  public yourself => self.
+}
