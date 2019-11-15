@@ -1,6 +1,8 @@
 namespace Loa.
 
-export partial class Number.
+export partial class Number {
+  public native + Number -> Number.
+}
 
 export partial class Integer {
   is Number.
