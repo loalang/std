@@ -1,26 +1,48 @@
 namespace Loa.
 
+/// I'm an object representing a boolean value.
 export partial class Boolean {
+  /// If I am true, I will return the first argument. Otherwise I will return the second one.
   public <a> ifTrue: a ifFalse: a -> a.
+  
+  /// I will return the boolean value opposite of myself.
   public not -> Boolean.
+  
   public and: Boolean -> Boolean.
+  
   public or: Boolean -> Boolean.
 }
 
+/// I'm an object representing a boolean truth.
 export class True {
-    is Boolean.
-
-    public <a> ifTrue: a value ifFalse: _ => value.
-    public not => False.
-    public and: Boolean other => other.
-    public or: _ => self.
+  is Boolean.
+  
+  public <a> ifTrue: a value ifFalse: _ =>
+    value.
+  
+  public not =>
+    False.
+  
+  public and: Boolean other =>
+    other.
+  
+  public or: _ =>
+    self.
 }
 
+/// I'm an object representing a boolean falsehood.
 export class False {
-    is Boolean.
-
-    public <a> ifTrue: _ ifFalse: a value => value.
-    public not => True.
-    public and: _ => self.
-    public or: Boolean other => other.
+  is Boolean.
+  
+  public <a> ifTrue: _ ifFalse: a value =>
+    value.
+  
+  public not =>
+    True.
+  
+  public and: _ =>
+    self.
+  
+  public or: Boolean other =>
+    other.
 }
