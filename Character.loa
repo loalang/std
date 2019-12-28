@@ -1,3 +1,4 @@
 namespace Loa.
 
+/// I represent a Unicode character.
 export class Character.

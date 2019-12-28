@@ -8,8 +8,10 @@ export partial class Boolean {
   /// I will return the boolean value opposite of myself.
   public not -> Boolean.
   
+  /// I will return [True] if I and the other boolean are both true.
   public and: Boolean -> Boolean.
   
+  /// I will return [True] if either I or the other boolean is true.
   public or: Boolean -> Boolean.
 }
 
@@ -17,15 +19,19 @@ export partial class Boolean {
 export class True {
   is Boolean.
   
+  /// I will return the first argument, and discard the second one.
   public <a> ifTrue: a value ifFalse: _ =>
     value.
   
+  /// I will _always_ return [False].
   public not =>
     False.
   
+  /// Since I am true, the answer of this message is whether the passed in one is also true. Thus, I will simply return it.
   public and: Boolean other =>
     other.
   
+  /// Since I am true, it doesn't matter what the passed in value is. The answer is always true, so I will just return myself.
   public or: _ =>
     self.
 }
@@ -34,15 +40,19 @@ export class True {
 export class False {
   is Boolean.
   
+  /// I will return the second argument, and discard the first one.
   public <a> ifTrue: _ ifFalse: a value =>
     value.
   
+  /// I will _always_ return [True].
   public not =>
     True.
   
+  /// Since I am false, it doesn't matter what the passed in value is. The answer is always false, so I will just return myself.
   public and: _ =>
     self.
   
+  /// Since I am false, the answer of this message is whether the passed in one is true or not. Thus, I will simply return it.
   public or: Boolean other =>
     other.
 }
