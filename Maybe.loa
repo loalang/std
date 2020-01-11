@@ -4,21 +4,16 @@ import Loa/Boolean.
 import Loa/True.
 import Loa/False.
 
-export partial class Maybe<a out> {
+export partial class Maybe<a> {
   public otherwise: a -> a.
   
   public isSome -> Boolean.
   
   public isNone -> Boolean.
-  
-  public value -> a.
 }
 
 export class None {
   is Maybe<_>.
-  
-  public value =>
-    True.
   
   public isSome =>
     False.
