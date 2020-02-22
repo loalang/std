@@ -25,17 +25,20 @@ export class None {
     fallback.
 }
 
-// class Some<a out> {
-//   is Maybe<a>.
-//
-//   private var a value.
-//
-//   public init of: a value =>
-//     value: value.
-//
-//   public isSome => True.
-//
-//   public isNone => False.
-//
-//   public otherwise: _ => self value.
-// }
+class Some<a> {
+  is Maybe<a>.
+  
+  private var a value.
+  
+  public init of: a value =>
+    value: value.
+  
+  public isSome =>
+    True.
+  
+  public isNone =>
+    False.
+  
+  public otherwise: _ =>
+    self value.
+}

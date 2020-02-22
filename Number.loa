@@ -2,6 +2,7 @@ namespace Loa.
 
 export partial class Number {
   public native + Number -> Number.
+  public native - Number -> Number.
 }
 
 export partial class Integer {

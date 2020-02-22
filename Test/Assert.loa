@@ -1,0 +1,12 @@
+namespace Loa/Test.
+
+export class Assert {
+  private var Object value.
+  
+  public init that: Object value =>
+    value: value.
+  
+  public == Object other -> None =>
+    self value == other;
+      ifTrue: None ifFalse: panic "assertion failed".
+}
